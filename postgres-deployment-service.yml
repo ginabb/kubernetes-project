@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-deployment-service
+  labels:
+    name: postgres-deployment-service
+    author: gina
+spec:
+  ports:
+    - targetPort: 5432
+      port: 5432
+  selector:
+    matchLabels:
+      name: postgres-deployment
+...
